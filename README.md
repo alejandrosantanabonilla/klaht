@@ -1,5 +1,6 @@
 # KLAHT
-KL-LSU Ab-Initio High-Throughput (KLAHT)
+
+**KCL-LSU Ab-Initio High-Throughput (KLAHT)**
 
 
 # ConcurrentVaspLauncher: Run VASP Calculations in Parallel
