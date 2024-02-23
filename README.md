@@ -8,19 +8,20 @@
 This document describes the ConcurrentVaspLauncher class, which allows you to execute multiple VASP calculations concurrently on your machine. 
 This can significantly speed up your workflow compared to running them sequentially.
 
-## Functionality
+## Functionalities:
 
 1. Launches multiple VASP calculations simultaneously using thread-based concurrency.
 2. Accepts a list of calculation details, including the VASP executable path, input directory, and optional arguments for individual calculations.
 3. Returns a list of futures representing the running calculations.
 4. Provides a wait_for_completion method to wait for all calculations to finish and handle any errors.
 
-## Benefits
+## Benefits:
+
 1. Faster calculations: Reduces overall execution time by utilizing multiple cores.
 2. Improved efficiency: Enables simultaneous execution of multiple VASP tasks.
 3. Organized workflow: Simplifies managing and monitoring multiple calculations.
 
-## Usage
+## Usage:
 
 Import the module in Python:
 
