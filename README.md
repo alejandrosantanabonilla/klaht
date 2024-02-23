@@ -41,18 +41,18 @@ calculations = [
 ```
 
 Each tuple contains the VASP executable path, input directory, and optional keyword arguments for the run_calculation method of VaspLuncher.
-Launch calculations:
-Python
+
+```
+#Launch calculations:
 futures = launcher.launch_calculations(calculations)
-Use code with caution.
-Wait for completion and handle errors:
-Python
+#Wait for completion and handle errors:
 launcher.wait_for_completion(futures)
-Use code with caution.
-Example
+```
+
 The provided code snippet demonstrates how to launch two VASP calculations concurrently using different executables and configurations.
 
-Notes
-Ensure you have the concurrent.futures module installed (pip install concurrent.futures).
-Refer to the VaspLuncher documentation for details on supported arguments for the run_calculation method.
-Adjust the max_workers parameter based on your system resources and desired performance
+# Notes
+
+1. Ensure you have the concurrent.futures module installed (pip install concurrent.futures).
+2. Refer to the VaspLuncher documentation for details on supported arguments for the run_calculation method.
+3. Adjust the max_workers parameter based on your system resources and desired performance
