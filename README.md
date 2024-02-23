@@ -10,13 +10,10 @@ This can significantly speed up your workflow compared to running them sequentia
 
 ## Functionality
 
-Launches multiple VASP calculations simultaneously using thread-based concurrency.
-
-Accepts a list of calculation details, including the VASP executable path, input directory, and optional arguments for individual calculations.
-
-Returns a list of futures representing the running calculations.
-
-Provides a wait_for_completion method to wait for all calculations to finish and handle any errors.
+1. Launches multiple VASP calculations simultaneously using thread-based concurrency.
+2. Accepts a list of calculation details, including the VASP executable path, input directory, and optional arguments for individual calculations.
+3. Returns a list of futures representing the running calculations.
+4. Provides a wait_for_completion method to wait for all calculations to finish and handle any errors.
 
 ## Benefits
 1. Faster calculations: Reduces overall execution time by utilizing multiple cores.
