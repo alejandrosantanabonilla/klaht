@@ -43,6 +43,7 @@ Each tuple contains the VASP executable path, input directory, and optional keyw
 ```
 #Launch calculations:
 futures = launcher.launch_calculations(calculations)
+
 #Wait for completion and handle errors:
 launcher.wait_for_completion(futures)
 ```
