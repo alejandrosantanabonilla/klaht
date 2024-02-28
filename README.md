@@ -54,8 +54,5 @@ The provided code snippet demonstrates how to launch two VASP calculations concu
 
 Ensure you have the concurrent.futures module installed (pip install concurrent.futures).
 Refer to the VaspLuncher documentation for details on supported arguments for the run_calculation method.
-<<<<<<< HEAD
 Adjust the max_workers parameter based on your system resources and desired performance
-=======
-Adjust the max_workers parameter based on your system resources and desired performance
->>>>>>> 948c9bc4c8e1fd9b56be64860ede49ec5a89c788
+
