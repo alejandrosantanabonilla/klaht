@@ -9,6 +9,10 @@ class JsonToTextFile:
     Attributes:
         data (dict): The loaded JSON data.
         output_file (str, optional): The filename to save the output (default: None).
+
+    Example: Read the filed parder_incar.json and print it as parsed_incar_variables.txt
+        parser = IncarDataParser("parsed_incar.json", "parsed_incar_variables.txt")
+        parser.save_variables() 
     """
 
     def __init__(self, filename, output_file=None):
@@ -69,9 +73,3 @@ class JsonToTextFile:
         output_data = self.print_variables(data)
         with open(self.output_file, "w") as text_file:
             text_file.write(output_data)
-
-
-#if __name__ == "__main__":
-    # Example usage
-    #parser = IncarDataParser("parsed_incar.json", "parsed_incar_variables.txt")
-    #parser.save_variables() 
