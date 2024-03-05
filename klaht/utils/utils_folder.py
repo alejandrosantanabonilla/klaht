@@ -10,6 +10,12 @@ class FolderManager:
         folder_name (str): The base name for the folders to be created.
         input_folder (str): The folder containing the files to be copied.
         files_to_copy (list): A list of file names to copy from the input folder.
+
+    Example: 
+        manager = FolderManager("my_folder", "input", ["INCAR", "POSCAR", "POTCAR"])
+        manager.create_folders(5)  # Create 5 folders with the name my folder and copy the files "INCAR",
+        "POSCAR", and "POTCAR" from folder input to my_folder_{i}.
+        
     """
 
     def __init__(self, folder_name, input_folder, files_to_copy):
@@ -59,7 +65,3 @@ class FolderManager:
                 print(f"{filename} copied to {folder_name}")
         except OSError as error:
             raise
-
-# Example usage:
-#manager = FolderManager("my_folder", "input", ["INCAR", "POSCAR", "POTCAR"])
-#manager.create_folders(5)  # Create 5 folders and copy files to them
