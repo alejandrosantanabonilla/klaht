@@ -17,6 +17,18 @@ class VaspLuncher:
 
         Args:
             vasp_exe (str): Path to the VASP executable.
+
+        Example usage:
+        
+        launcher = ConcurrentVaspLauncher()
+        calculations = [
+                        ("vasp_gam", "my_folder_1", dict(num_cores=4, out_file="output1.log", use_mpi=True)),
+                        ("vasp_gam", "my_folder_2", dict(num_cores=2, out_file="output2.log")),
+        ]
+
+        futures = launcher.launch_calculations(calculations)
+        launcher.wait_for_completion(futures)
+            
         """
         self.vasp_exe = vasp_exe
 
@@ -99,14 +111,3 @@ class ConcurrentVaspLauncher:
                 future.result()
             except VaspError as e:
                 print(f"Error in calculation: {e}")
-
-# Example usage:
-#launcher = ConcurrentVaspLauncher()
-#calculations = [
-#    ("vasp_gam", "my_folder_1", dict(num_cores=4, out_file="output1.log", use_mpi=True)),
-#    ("vasp_gam", "my_folder_2", dict(num_cores=2, out_file="output2.log")),
-#]
-
-#futures = launcher.launch_calculations(calculations)
-#launcher.wait_for_completion(futures)
-
